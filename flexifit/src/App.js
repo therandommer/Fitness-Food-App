@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import LoginButton from './components/login.js';
+import LoginButton from './components/login.jsx';
 import './App.css';
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
         
       </header>
       <body className="App-body">
+        <LoginButton />
         <LoginButton />
       </body>
       <footer className="App-footer">
