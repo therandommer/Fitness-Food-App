@@ -1,7 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+// creating the carousel to dispaly pictures of the body transformation for the users who have used our app.
 
 const Homepage = () => {
   return (
@@ -15,7 +17,7 @@ const Homepage = () => {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="image1.jpg" alt="Image 1" />
+              <img src="" alt="Image 1" />
             </div>
             <div className="carousel-item">
               <img src="image2.jpg" alt="Image 2" />

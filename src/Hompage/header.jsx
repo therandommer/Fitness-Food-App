@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import './header.css'
 import Navbar from "./navbar";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

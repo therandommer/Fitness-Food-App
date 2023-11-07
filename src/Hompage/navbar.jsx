@@ -1,8 +1,10 @@
-// Navbar.js function to create the navbar component to be used
+// Navbar.js function to create the navbar component to be used on the homepage
 
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const Navbar = () => {
@@ -25,13 +27,13 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/">Homepage</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">About</Link>
+            <Link className="nav-link" to="/Profile">Profile</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/contact">Contact</Link>
+            <Link className="nav-link" to="/contact">Excercises</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/login">Login</Link>
