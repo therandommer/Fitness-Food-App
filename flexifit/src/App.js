@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import LoginButton from './components/login.js';
 import './App.css';
 
 function App() {
@@ -17,7 +18,14 @@ function App() {
         >
           Learn React
         </a>
+        
       </header>
+      <body className="App-body">
+        <LoginButton />
+      </body>
+      <footer className="App-footer">
+
+      </footer>
     </div>
   );
 }
