@@ -22,7 +22,6 @@ function App() {
       </header>
       <body className="App-body">
         <LoginButton />
-        <LoginButton />
       </body>
       <footer className="App-footer">
 
