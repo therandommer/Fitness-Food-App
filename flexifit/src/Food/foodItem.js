@@ -15,13 +15,14 @@ const foodItems = [
     { name: "Burger", price: 8.99 },
     { name: "Salad", price: 5.99 },
     { name: "Pasta", price: 12.99 },
-    { name: "Ice Cream", price: 4.99 },
+    { name: "Ice Cream", price: 4.99 }
 ];
 
 const foodList = document.getElementById("food-items");
 const cartList = document.getElementById("cart-items");
 const totalPrice = document.getElementById("total-price");
 
+// Looping through each food item and creating the HTML associated to each element
 foodItems.forEach(item => {
     const foodItem = document.createElement("li");
     foodItem.classList.add("food-item");
@@ -35,6 +36,7 @@ foodItems.forEach(item => {
 
 let cart = [];
 let cartTotal = 0.0;
+
 
 function addToCart(name, price) {
     cart.push({ name, price });
