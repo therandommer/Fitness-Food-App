@@ -1,17 +1,9 @@
 //--- Variables ---
-// let User = {
-//     username: "",
-//     password: ""
-// }
-
 let newUsername = "usernameVariable";
 let newPassword = "passwordVariable";
-let validUsers = []; //will contain a list of valid user objects to compare
 
 //--- Functions ---
 
-//const bob = new User(newUsername, newPassword);
-//console.log(bob);
 export default function LoginButton(){
     return(
         <section>
