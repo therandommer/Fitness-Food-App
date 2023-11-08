@@ -4,14 +4,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import logo from "../assets/flexifit-logo.png"
 
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-      <img src="/assets/flexifit-logo.png" alt="flexifit Logo" />
+      <img src={logo} alt="flexifit Logo" />
       </Link>
       <button
         className="navbar-toggler"
@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link className="nav-link" to="/">Homepage</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/Profile">Profile</Link>
+            <Link className="nav-link" to="/profile">Profile</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/contact">Excercises</Link>

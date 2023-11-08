@@ -1,33 +1,36 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import header from '../src/Hompage/header';
 import Navbar from '../src/Hompage/navbar';
 import Home from './pages/homepage';
 import Login from './pages/Profile/login';
-import footer from '../src/Hompage/footer';
+import Footer from '../src/Hompage/footer';
+import Wrapper from './components/wrapper';
+import ExercisePage from './pages/Exercises/ExercisePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
-    <Router>
-      <div>
+        <div>
         <header> 
         <Navbar />
         </header>
         <Wrapper>
           <Routes>
             <Route path="/" element={<Login/>} />
-            <Route path="/about" element={<AboutUs/>} />
-            <Route path="/page/profile" element={<Profile/>} />
-            <Route path="/page/Exercises" element={<Excercises/>} />
-            <Route path="/page/Foods" element={<Foods/>} />
+            {/* <Route path="/about" element={<AboutUs/>} /> */}
+            {/* <Route path="/page/profile" element={<Profile/>} /> */}
+            <Route path="/page/Exercises" element={<ExercisePage/>} />
+            {/* <Route path="/page/Foods" element={<Foods/>} /> */}
 
             
           </Routes>
         </Wrapper>
         <Footer />
       </div>
-    </Router>
+   
   );
 }
 
