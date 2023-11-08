@@ -8,9 +8,6 @@ import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 // export default function ()
 
 export default function RegistrationForm() {
-
-  // Variable to recieve the user inputes for Profile page
-
     const [formData, setFormData] = useState({
         profileImage: null,
         firstName: '',
@@ -38,7 +35,6 @@ export default function RegistrationForm() {
             profileImage: image,
         });
     };
-// BMI calculation for the user 
 
     const calculateBMI = () => {
         const heightInMeters = formData.height / 100;
