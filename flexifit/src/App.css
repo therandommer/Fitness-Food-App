@@ -67,6 +67,13 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+input[type="button"] {
+  border: none;
+  background: cornflowerblue;
+  color: white;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
 }
