@@ -1,28 +1,29 @@
-//--- Variables ---
-let profilePicture;
-let name = {
-    firstName: "",
-    middleName: "",
-    lastName: ""
-};
-let gender = "";
-let address = "";
-let age = 0;
-let height = 0;
-let weight = 0;
-let BMI = 0;
-let fitnessIntesity = "";
-let selectedExcercises = []; //array of exercise cards to be placed here
-let basket = []; //array of menu items to be placed here
-let totalCaloriesLost = 0; //update based on progress generated from the calendar
+import React, { useState } from 'react';
+import { Form, Container, Row, Col, Button } from 'react-bootstrap';
+// //--- Variables ---
+// let profilePicture;
+// let name = {
+//     firstName: "",
+//     middleName: "",
+//     lastName: ""
+// };
+// let gender = "";
+// let address = "";
+// let age = 0;
+// let height = 0;
+// let weight = 0;
+// let BMI = 0;
+// let fitnessIntesity = "";
+// let selectedExcercises = []; //array of exercise cards to be placed here
+// let basket = []; //array of menu items to be placed here
+// let totalCaloriesLost = 0; //update based on progress generated from the calendar
 
 //--- Functions ---
 
-import React, { useState } from 'react';
-import { Form, Container, Row, Col, Button } from 'react-bootstrap';
+
 // export default function ()
 
-const RegistrationForm = () => {
+export default function RegistrationForm() {
     const [formData, setFormData] = useState({
         profileImage: null,
         firstName: '',
@@ -71,13 +72,13 @@ const RegistrationForm = () => {
         <Container>
             <h2 className="mt-3">Registration Form</h2>
             <Form onSubmit={handleSubmit}>
-                <Form.Group>
+                {/* <Form.Group>
                     <Form.Label>Profile Image</Form.Label>
                     <Form.File name="profileImage" custom>
-                        <Form.File.Input onChange={handleImageChange} />
-                    </Form.File>
-                </Form.Group>
-                <Row>
+                         <Form.File.Input onChange={handleImageChange} /> 
+            </Form.File>
+        </Form.Group> */}
+                <Row >
                     <Col>
                         <Form.Group>
                             <Form.Label>First Name</Form.Label>
@@ -90,7 +91,7 @@ const RegistrationForm = () => {
                             <Form.Control type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} />
                         </Form.Group>
                     </Col>
-                </Row>
+                </Row >
                 <Form.Group>
                     <Form.Label>Gender</Form.Label>
                     <Form.Control as="select" name="gender" value={formData.gender} onChange={handleInputChange}>
@@ -131,10 +132,10 @@ const RegistrationForm = () => {
                 <Button variant="primary" type="submit">
                     Register
                 </Button>
-            </Form>
-        </Container>
+            </Form >
+        </Container >
     );
 };
 
-export default RegistrationForm;
+
 
