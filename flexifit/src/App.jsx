@@ -4,9 +4,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import LoginPage from './components/loginElement';
+import LoginElement from './components/loginElement';
 
 //routes are used to plug each page.
+//use the / route to plug the homepage
+//use the /calendar, etc. page to plug each other page.
 function App() {
   const [count, setCount] = useState(0)
 
@@ -17,7 +19,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<LoginPage email={email} isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn}/>}/>
+          <Route path="/login" element={<LoginElement email={email} isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn}/>}/>
           
         </Routes>
       </BrowserRouter>
