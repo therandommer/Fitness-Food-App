@@ -10,6 +10,7 @@ let previewImage;
 let largeImage;
 
 //--- Functions ---
+<<<<<<< HEAD
 var selectedStarter = {
     dish: "(None)",
     price: 0
@@ -30,6 +31,15 @@ var selectedStarter = {
     thirdDish: "Fish rolls",
     thirdDishPrice: 12
   };
+=======
+const foodItems = [
+    { name: "Pizza", price: 10.99 },
+    { name: "Burger", price: 8.99 },
+    { name: "Salad", price: 5.99 },
+    { name: "Pasta", price: 12.99 },
+    { name: "Ice Cream", price: 4.99 }
+];
+>>>>>>> da47820be3b38343a78e2b0f99e3fee95920fe6a
 
   var main = {
     firstDish: "Steak",
@@ -40,6 +50,7 @@ var selectedStarter = {
     thirdDishPrice: 9
   };
 
+<<<<<<< HEAD
   var dessert = {
     firstDish: "Sorbet",
     firstDishPrice: 4,
@@ -48,17 +59,37 @@ var selectedStarter = {
     thirdDish: "Apple pie",
     thirdDishPrice: 5
   };
+=======
+// Looping through each food item and creating the HTML associated to each element
+foodItems.forEach(item => {
+    const foodItem = document.createElement("li");
+    foodItem.classList.add("food-item");
+    foodItem.innerHTML = `
+        <h2>${item.name}</h2>
+        <p>Price: $${item.price.toFixed(2)}</p>
+        <button onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>
+    `;
+    foodList.appendChild(foodItem);
+});
+>>>>>>> da47820be3b38343a78e2b0f99e3fee95920fe6a
 
   function total() {
     return selectedStarter.price + selectedMain.price + selectedDessert.price;
   }
 
+<<<<<<< HEAD
   function selectedStarterFnc(dish, price) {
     selectedStarter.price = price;
     selectedStarter.dish = dish;
     $("#total").html(total());
     return dish + "(" + price + ")";
   }
+=======
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    cartTotal += price;
+>>>>>>> da47820be3b38343a78e2b0f99e3fee95920fe6a
 
   function selectedMainFnc(dish, price) {
     selectedMain.price = price;
