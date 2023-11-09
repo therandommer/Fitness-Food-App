@@ -24,6 +24,7 @@ import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 // export default function ()
 
 export default function RegistrationForm() {
+    // State to manage form data
     const [formData, setFormData] = useState({
         profileImage: null,
         firstName: '',
@@ -36,14 +37,17 @@ export default function RegistrationForm() {
         bmiNumber: '',
     });
 
+    // Handle input changes in the form
     const handleInputChange = (e) => {
         const { name, value } = e.target;
+        // Update the formData state with the new value
         setFormData({
             ...formData,
             [name]: value,
         });
     };
 
+    // Handle profile image changes
     const handleImageChange = (e) => {
         const image = e.target.files[0];
         setFormData({
@@ -51,21 +55,25 @@ export default function RegistrationForm() {
             profileImage: image,
         });
     };
-
+    // Calculate BMI based on height and weight
     const calculateBMI = () => {
         const heightInMeters = formData.height / 100;
         const weightInKg = formData.weight;
         const bmi = (weightInKg / (heightInMeters * heightInMeters)).toFixed(2);
+        // Update the formData state with the calculated BMI
         setFormData({
             ...formData,
             bmiNumber: bmi,
         });
     };
-
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        calculateBMI(); // Calculate BMI before submitting
+        // Calculate BMI before submitting the form
+        calculateBMI();
+        // Perform form submission logic (e.g., send data to server)
         // You can now submit the formData to your server or process it as needed.
+
     };
 
     return (
