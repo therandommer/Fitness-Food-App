@@ -22,6 +22,8 @@ function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
 
+  //get if the user is logged in in local storage
+  
   return (
     <div className="App">
       <header>
