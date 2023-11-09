@@ -9,6 +9,7 @@ import Footer from '../src/Hompage/footer';
 import Wrapper from './components/wrapper';
 import ExercisePage from './pages/Exercises/ExercisePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Homepage from './pages/homepage';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             
           </Routes>
         </Wrapper>
+        <Homepage/>
         <Footer />
       </div>
    
