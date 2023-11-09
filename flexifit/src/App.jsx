@@ -1,9 +1,10 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import header from '../src/Hompage/header';
-import Navbar from '../src/Hompage/navbar';
+import header from '../src/Hompage/Header';
+import NavbarUsed from '../src/Hompage/navbar';
 import Home from './pages/homepage';
+import Profile from './pages/Profile/Profile'
 import Login from './pages/Profile/login';
 import Footer from '../src/Hompage/footer';
 import Wrapper from './components/wrapper';
@@ -14,25 +15,24 @@ import Homepage from './pages/homepage';
 
 function App() {
   return (
-        <div>
-        <header> 
-        <Navbar />
-        </header>
-        <Wrapper>
-          <Routes>
-            <Route path="/" element={<Login/>} />
-            {/* <Route path="/about" element={<AboutUs/>} /> */}
-            {/* <Route path="/page/profile" element={<Profile/>} /> */}
-            <Route path="/page/Exercises" element={<ExercisePage/>} />
-            {/* <Route path="/page/Foods" element={<Foods/>} /> */}
+    <div>
+      <header>
+        <NavbarUsed />
+      </header>
+      <Wrapper>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          {/* <Route path="/about" element={<AboutUs/>} /> */}
+          <Route path="/pages/Profile/Profile" element={<Profile />} />
+          <Route path="/Food/FoodMenu" element={<foodMenu />} />
+          <Route path="/page/Exercises" element={<ExercisePage />} />
+        </Routes>
+        <Homepage />
+      </Wrapper>
 
-            
-          </Routes>
-        </Wrapper>
-        <Homepage/>
-        <Footer />
-      </div>
-   
+      <Footer />
+    </div>
+
   );
 }
 

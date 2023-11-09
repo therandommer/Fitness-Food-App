@@ -7,7 +7,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 // creating the carousel to dispaly pictures of the body transformation for the users who have used our app.
 
-const Homepage = () => {
+function Homepage () {
   return (
     <div>
       <div className="container">

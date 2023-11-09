@@ -4,7 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from "../assets/flexifit-logo.png"
+import logo from "../assets/images/flexifit-logo.png"
 
 
 // const Navbar = () => {
@@ -50,7 +50,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-function ColorSchemesExample() {
+function NavbarUsed() {
   return (
     <>
       <Navbar bg="dark" data-bs-theme="dark">
@@ -71,4 +71,4 @@ function ColorSchemesExample() {
   );
 }
 
-export default ColorSchemesExample;
+export default NavbarUsed;

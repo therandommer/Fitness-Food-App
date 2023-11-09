@@ -1,9 +1,8 @@
 // function to create the component for header
 import react from "react";
 import { useState } from 'react';
-
 import './header.css'
-import Navbar from "./navbar";
+// import NavbarUsed from "./Navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
