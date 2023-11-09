@@ -3,8 +3,8 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 var cors = require("cors");
 const jwt = require("jsonwebtoken");
-var low = require("lowdb");
-var FileSync = require("lowdb/adapters/FileSync");
+var low = import("lowdb");
+import {FileSync} from "lowdb/node";
 var adapter = new FileSync("./database.json");
 var db = low(adapter);
 
@@ -88,3 +88,19 @@ app.post("/verify", (req, res) => {
         return res.status(401).json({ status: "invalid auth", message: "error" });
     }
 });
+
+//checking if user already exists
+app.post("/check-account", (req, res) => {
+    const{email}  = req.body; //request body is the email
+    console.log(req.body); //logging the request
+    
+    const user = db.get("users").value().filter(user => email === user.email); //check if user email exists in the database.
+    console.log(user);
+
+    res.status(200).json({
+        status: user.length === 1 ? "User exists" : "User does not exist", userExists: user.length === 1 //return status code based on user existing or not
+    });
+});
+
+//make it so that the auth-server will listen to the main app
+app.listen(3080);
