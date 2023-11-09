@@ -7,7 +7,25 @@ const LoginElement = (props) => {
 
     //update on button state
     const onButtonClick = () => {
+        setEmailError("");
+        setPasswordError("");
 
+        if("" === email)
+        {
+            setEmailError("Please enter your email!");
+            return;
+        }
+
+        if("" === password)
+        {
+            setPasswordError("Please enter a password");
+            return;
+        }
+
+        if (password.length < 6)
+        {
+            setPasswordError("Your password must be at least 7 characters long");
+        }
     }
 
     //creating the HTML for the containers of the login menu
