@@ -1,9 +1,9 @@
 //declaring addon dependencies
-const express = require("express");
-const bcrypt = require("bcrypt");
-var cors = require("cors");
-const jwt = require("jsonwebtoken");
-var low = import("lowdb");
+import {express} from "express";
+import {bcrypt} from "bcrypt";
+import {cors} from "cors";
+import {jwt} from "jsonwebtoken";
+import {low} from "lowdb";
 import {FileSync} from "lowdb/node";
 var adapter = new FileSync("./database.json");
 var db = low(adapter);

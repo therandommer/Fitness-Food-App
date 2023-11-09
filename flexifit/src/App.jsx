@@ -17,6 +17,8 @@ import ExercisePage from "./pages/Exercises/ExercisePage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Homepage from "./pages/homepage";
 
+import {useEffect} from "react";
+
 function App() {
   //states for login page
   const [isLoggedIn, setLoggedIn] = useState(false);
