@@ -22,8 +22,30 @@ function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
 
-  //get if the user is logged in in local storage
-  
+  useEffect(() => {
+    //get if the user is logged in within local storage
+    const user = JSON.parse(localStorage.getIteme("user"));
+
+    //if the user is not logged in, log the user out
+    if (!user || !user.token) {
+      setLoggedIn(false);
+      return;
+    }
+
+    //if the user is logged in, verify with the authentication server
+    fetch("http://localhost:3080/verify", {
+      method: "POST",
+      headers: {
+        "jwt-token": user.token,
+      },
+    })
+      .then((reply) => reply.json())
+      .then((reply) => {
+        setLoggedIn("success" === reply.message);
+        setEmail(user.email || "");
+      });
+  });
+
   return (
     <div className="App">
       <header>
@@ -31,8 +53,16 @@ function App() {
       </header>
       <Wrapper>
         <Routes>
-          <Route path="/" element={<LoginElement setLoggedIn={setLoggedIn} setEmail={setEmail}/>} />
-          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail}/>} />
+          <Route
+            path="/"
+            element={
+              <LoginElement setLoggedIn={setLoggedIn} setEmail={setEmail} />
+            }
+          />
+          <Route
+            path="/login"
+            element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />}
+          />
           {/* <Route path="/about" element={<AboutUs/>} /> */}
           {/* <Route path="/page/profile" element={<Profile/>} /> */}
           <Route path="/page/Exercises" element={<ExercisePage />} />
