@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../assets/images/flexifit-logo.png"
 
-
 // const Navbar = () => {
 //   return (
 //     <nav className="navbar navbar-expand-lg navbar-light bg-light">
