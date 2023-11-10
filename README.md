@@ -3,7 +3,7 @@
 ## Fitness-Food-App
 ![this is the home Page](/flexifit/assets/images/homepage.png)
 ## Links
-- The URL of the functional, [Deployed Netflify]()
+- The URL of the functional, [Deployed Netflify](https://flexifit1.netlify.app/)  *The deployed netlify does not work due to errors with the website
 - The URL of the [GitHub Repository.](https://github.com/therandommer/Fitness-Food-App/tree/main)
 
 ## Table of Contents
