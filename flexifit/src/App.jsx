@@ -25,42 +25,42 @@ function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
 
-  useEffect(() => {
-    //get if the user is logged in within local storage
-    const user = JSON.parse(localStorage.getItem("user"));
+  // useEffect(() => {
+  //   //get if the user is logged in within local storage
+  //   const user = JSON.parse(localStorage.getItem("user"));
 
-    //if the user is not logged in, log the user out
-    if (!user || !user.token) {
-      setLoggedIn(false);
-      return;
-    }
+  //   //if the user is not logged in, log the user out
+  //   if (!user || !user.token) {
+  //     setLoggedIn(false);
+  //     return;
+  //   }
 
-    //if the user is logged in, verify with the authentication server
-    fetch("http://localhost:3080/verify", {
-      method: "POST",
-      headers: {
-        "jwt-token": user.token,
-      },
-    })
-      .then((reply) => reply.json())
-      .then((reply) => {
-        setLoggedIn("success" === reply.message);
-        setEmail(user.email || "");
-      });
-  });
+  //   //if the user is logged in, verify with the authentication server
+  //   fetch("http://localhost:3080/verify", {
+  //     method: "POST",
+  //     headers: {
+  //       "jwt-token": user.token,
+  //     },
+  //   })
+  //     .then((reply) => reply.json())
+  //     .then((reply) => {
+  //       setLoggedIn("success" === reply.message);
+  //       setEmail(user.email || "");
+  //     });
+  // });
 
-  //logic for loggin in the user or not
-  const onButtonClick = () => {
-    if(loggedIn)
-    {
-      localStorage.removeItem("user") //will remove the user from local storage
-      props.setLoggedIn(false) //will set loggedin status to false
-    }
-    else
-    {
-      Navigate("/login"); //if not logged in, navigate to the login page
-    }
-  }
+  // //logic for loggin in the user or not
+  // const onButtonClick = () => {
+  //   if(loggedIn)
+  //   {
+  //     localStorage.removeItem("user") //will remove the user from local storage
+  //     props.setLoggedIn(false) //will set loggedin status to false
+  //   }
+  //   else
+  //   {
+  //     Navigate("/login"); //if not logged in, navigate to the login page
+  //   }
+  // }
   return (
     <div className="App">
       <header>
@@ -68,16 +68,8 @@ function App() {
       </header>
       <Wrapper>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <LoginElement setLoggedIn={setLoggedIn} setEmail={setEmail} />
-            }
-          />
-          <Route
-            path="/login"
-            element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />}
-          />
+          <Route path="/" element={<Home />}/>
+          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />}/> 
           {/* <Route path="/about" element={<AboutUs/>} /> */}
           {/* <Route path="/page/profile" element={<Profile/>} /> */}
           <Route path="/page/Exercises" element={<ExercisePage />} />
