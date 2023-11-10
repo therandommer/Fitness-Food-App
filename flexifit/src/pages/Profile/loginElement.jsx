@@ -49,4 +49,4 @@ const LoginElement = (props) => {
     </section>
 }
 
-export default LoginPage;
+export default LoginElement;

@@ -101,3 +101,5 @@ const LoginPage = (props) => {
         </section>
     </section>
 }
+
+export default LoginPage;

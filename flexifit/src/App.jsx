@@ -10,8 +10,8 @@ import {
 import header from "../src/Hompage/header";
 import Navbar from "../src/Hompage/navbar";
 import Home from "./pages/homepage";
-//import Login from "./pages/Profile/loginPage.jsx";
-import LoginElement from "./pages/Profile/loginElement";
+import Login from "./pages/Profile/LoginPage.jsx";
+import LoginElement from "./pages/Profile/LoginElement.jsx";
 import Footer from "../src/Hompage/footer";
 import Wrapper from "./components/wrapper";
 import ExercisePage from "./pages/Exercises/ExercisePage";
@@ -69,7 +69,7 @@ function App() {
       <Wrapper>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />}/> 
+          {<Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />}/> }
           {/* <Route path="/about" element={<AboutUs/>} /> */}
           {/* <Route path="/page/profile" element={<Profile/>} /> */}
           <Route path="/page/Exercises" element={<ExercisePage />} />
