@@ -10,7 +10,7 @@ import {
 import header from "../src/Hompage/header";
 import Navbar from "../src/Hompage/navbar";
 import Home from "./pages/homepage";
-import Login from "./pages/Profile/loginPage.jsx";
+//import Login from "./pages/Profile/loginPage.jsx";
 import LoginElement from "./pages/Profile/loginElement";
 import Footer from "../src/Hompage/footer";
 import Wrapper from "./components/wrapper";
