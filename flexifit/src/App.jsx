@@ -22,8 +22,8 @@ import {useEffect} from "react";
 
 function App() {
   //states for login page
-  const [isLoggedIn, setLoggedIn] = useState(false);
-  const [email, setEmail] = useState("");
+  //const [isLoggedIn, setLoggedIn] = useState(false);
+  //const [email, setEmail] = useState("");
 
   // useEffect(() => {
   //   //get if the user is logged in within local storage
